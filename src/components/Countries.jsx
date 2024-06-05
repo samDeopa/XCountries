@@ -27,7 +27,7 @@ export default function Flags() {
     <div className="container">
       {countries.map((country) => (
         <CountryCard
-          key={country.official}
+          key={country.name.official}
           name={country.name.common}
           flag={country.flags.png}
           alt={country.flags.alt}
