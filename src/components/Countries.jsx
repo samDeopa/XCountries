@@ -18,10 +18,9 @@ export default function Flags() {
   const [filter, setFilter] = useState("");
   useEffect(() => {
     try {
-      axios("https://restcountries.com/v3.1/all").then((res) =>
-        SetCountries(res.data)
-      );
-      setOnMount(true);
+      axios("https://restcountries.com/v3.1/all")
+        .then((res) => SetCountries(res.data))
+        .then(() => setOnMount(true));
     } catch (e) {
       console.log(e);
     }
