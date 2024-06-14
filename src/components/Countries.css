@@ -1,21 +1,32 @@
 .card {
-  height: 200x;
-  width: 200px;
+  height: 170px;
+  width: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+  padding: 20px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .card img {
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputField {
+  width: 100px;
 }
