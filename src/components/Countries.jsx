@@ -33,7 +33,9 @@ export default function Flags() {
       setFlagsToRender([...countries]);
     } else {
       setFlagsToRender(
-        countries.filter((country) => country.name.common.includes(filter))
+        countries.filter((country) =>
+          country.name.common.toLocaleLowerCase().includes(filter)
+        )
       );
       console.log(flagsToRender);
     }
@@ -44,7 +46,7 @@ export default function Flags() {
       <input
         type="text"
         onChange={(e) => {
-          setFilter(e.target.value);
+          setFilter(e.target.value.toLocaleLowerCase());
         }}
         className="inputField"
       />
