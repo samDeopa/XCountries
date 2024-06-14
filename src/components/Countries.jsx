@@ -20,7 +20,10 @@ export default function Flags() {
     try {
       axios("https://restcountries.com/v3.1/all")
         .then((res) => SetCountries(res.data))
-        .then(() => setOnMount(true));
+        .then(() => setOnMount(true))
+        .catch((e) => {
+          console.log(e);
+        });
     } catch (e) {
       console.log(e);
     }
