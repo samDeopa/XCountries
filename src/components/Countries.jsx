@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./Countries.css";
 const CountryCard = ({ name, flag, alt }) => {
   return (
-    <div className="card">
+    <div className="countryCard">
       <img src={flag} alt={alt} />
       <h2>{name}</h2>
     </div>
